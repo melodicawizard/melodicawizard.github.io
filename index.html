@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+  <div id="header"></div>
+  <br>
+  <div id="navigation"></div>
+  <div id="flex" >
+    <main>
+      <img src="assets/testimage.png">
+      <h1>Bas Ruckebusch | <a href="mailto:bas.ruckebusch@gmail.com">bas.ruckebusch@gmail.com</a></h1>
+      <p>This is my site put a better description here</p>
+    </main>
+  </div>
 </body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
 </html>

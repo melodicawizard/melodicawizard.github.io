@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <br>
+    <div id="navigation"></div>
+    <div id="flex" >
+      <main>
+        <h1>About</h1>
+        <p>Hello! My name is Bas, I'm a game developer.</p>
+        <p>My passion for game design lies chiefly in the gritty aspects of creation - namely, the programming of systems and gameplay, along with a lesser experience in engine programming. My expertise is primarily with C++ and C#, and though I would appreciate a position that allows me to execute on that expertise, I find that any position that requires gameplay programming would be the best fit.</p>
+        <p>I'm seeking to both broaden my horizon with new experiences while also lending my current expertise to those who can best utilize it.</p>
+        <p>In my free time I enjoy TTRPGS, writing and making pictures out of tiny squares. </p>
+        <br>
+        <p>Here are some of my links:</p>
+        <p>
+          <a href="https://github.com/BasRuckebusch/" target="_blank">
+            <span>GitHub</span>
+          </a> | 
+          <a href="https://www.linkedin.com/in/bas-ruckebusch-65a169281/" target="_blank">
+            <span>LinkedIn</span>
+          </a> | 
+          <a href="mailto:bas.ruckebusch@gmail.com">
+            <span>E-mail</span>
+          </a>
+        </p>
+      </main>
+    </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="header"></div>
+  <br>
+  <div id="navigation"></div>
+  <div id="flex">
+    <main>
+      <div class="project">
+        <a href="rogoto.html" class="project-image">
+            <img src="assets/projects/Rogoto.png" alt="Rogoto">
+        </a>
+        <div class="project-content">
+            <a href="rogoto.html" class="project-title">Rogoto →</a>
+            <p class="project-description">Roguelike automation tower defence game</p>
+            <p class="project-description">C# | Unity | Gameplay | Algorithm</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="nds.html" class="project-image">
+            <img src="assets/projects/NDS.png" alt="Hieda no Akyuu's Nocturnal Discordant Symposium">
+        </a>
+        <div class="project-content">
+            <a href="nds.html" class="project-title">Hieda no Akyuu's Nocturnal Discordant Symposium →</a>
+            <p class="project-description">Concept winner in the Touhou Fan Game Jam 11</p>
+            <p class="project-description">C# | Unity | Gameplay</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="dollarone.html" class="project-image">
+            <img src="assets/projects/Dollar1.png" alt="$1 Unistroke Recognizer">
+        </a>
+        <div class="project-content">
+            <a href="dollarone.html" class="project-title">$1 Unistroke Recognizer →</a>
+            <p class="project-description">A unistroke recognizer made in Unity and the beating heart of NDS.</p>
+            <p class="project-description">C# | Unity | Algorithm | Tool</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="raytracer.html" class="project-image">
+            <img src="assets/projects/RayTracer.png" alt="RayTracer">
+        </a>
+        <div class="project-content">
+            <a href="raytracer.html" class="project-title">RayTracer →</a>
+            <p class="project-description">Software Raytracer made in C++</p>
+            <p class="project-description">C++ | Graphics</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="formations.html" class="project-image">
+            <img src="assets/projects/formations.png" alt="Formations">
+        </a>
+        <div class="project-content">
+            <a href="formations.html" class="project-title">Formations →</a>
+            <p class="project-description">Unit formations for Real-Time Strategy games in Unity</p>
+            <p class="project-description">C# | Unity | Gameplay</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="cellularautomata.html" class="project-image">
+            <img src="assets/projects/CA.png" alt="Cellular Automata">
+        </a>
+        <div class="project-content">
+            <a href="cellularautomata.html" class="project-title">Cellular Automata →</a>
+            <p class="project-description">A simple cave generation system in Unity.</p>
+            <p class="project-description">C# | Unity | Algorithm</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="wips.html" class="project-image">
+            <img src="assets/projects/vault.png" alt="Work in progress">
+        </a>
+        <div class="project-content">
+            <a href="wips.html" class="project-title">Work in progress →</a>
+            <p class="project-description">Everything I'm currently working on!</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+      <div class="project">
+        <a href="vault.html" class="project-image">
+            <img src="assets/projects/vault.png" alt="The Vault">
+        </a>
+        <div class="project-content">
+            <a href="vault.html" class="project-title">The Vault →</a>
+            <p class="project-description">Everything else I've done</p>
+        </div>
+      </div>
+      <hr class="project-divider">
+    </main>
+  </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+</html>

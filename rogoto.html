@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <br>
+    <div id="navigation"></div>
+    <div id="flex">
+      <main>
+        <div id="gallery">
+          <div id="main-image-container">
+            <img id="main-image" src="assets/projects/RogotoThumbnail.jpg" alt="Main Image">
+          </div>
+          <div id="thumbnail-container">
+            <div class="thumbnail video-thumbnail" data-video="https://www.youtube.com/embed/uiC_AVrhVs8">
+              <img src="assets/projects/RogotoThumbnail.jpg" alt="YouTube Video">
+            </div>
+            <img class="thumbnail" src="assets/projects/Rogoto1.png" alt="Thumbnail 1">
+            <img class="thumbnail" src="assets/projects/Rogoto2.png" alt="Thumbnail 2">
+            <img class="thumbnail" src="assets/projects/Rogoto3.png" alt="Thumbnail 3">
+            <img class="thumbnail" src="assets/projects/Rogoto4.png" alt="Thumbnail 4">
+          </div>
+        </div>
+        <br>
+        <h2>
+          <a href="https://wardergrip.itch.io/rogoto" target="_blank">Game link</a>
+        </h2>
+        <br>
+        <div id="description">
+          <div class="description-image">
+            <img src="assets/border.png" alt="Description Image">
+          </div>
+          <h1 class="highlight">General Information</h1>
+          <p>
+            <b>Project Duration:</b><br>
+            11 weeks<br>
+            8 hours per day<br>
+            <b>Engine:</b> Unity<br>
+          </p>
+          <h1 class="highlight">What is it?</h1>
+          <p>Rogoto is an automation roguelike with tower defense elements. The player is stranded on a planet and has to dig into neighbouring caves to extract resources. Each turn you get points which you can use to buy or upgrade towers, to ears more points you need to set up automation.</p>
+          <h1 class="highlight">My Role</h1>
+          <p>I was one of the 3 programmers on this project. Most of my effort was focused on making the terrain generation but I also added onto other systems where needed, eventually ending up working on everything at least a little.</p>
+          <br>
+        </div>
+      </main>
+    </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+<script type="text/javascript" src="gallery.js"></script>
+</html>
