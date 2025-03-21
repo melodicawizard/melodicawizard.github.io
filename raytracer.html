@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDS</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <br>
+    <div id="navigation"></div>
+    <div id="flex">
+        <main>
+            <h1>Software Ray Tracer</h1>
+            <h2>
+                <a href="https://github.com/BasRuckebusch/RayTracer" target="_blank">Source Code</a>
+            </h2>
+            <br>
+            <div id="description">
+              <div class="description-image">
+                <img src="assets/border.png" alt="Description Image">
+              </div>
+              <h1 class="highlight">General Information</h1>
+              <p>
+                <b>Project Duration:</b><br>
+                One Semester<br>
+                <b>Course:</b> Graphics Programming 1.<br>
+              </p>
+              <h1 class="highlight">What is it?</h1>
+              <p>A ray tracer written in C++ for the course of Graphics Programming 1 at DAE.</p>
+              <br>
+            </div>
+            <br>
+        </main>
+    </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+<script type="text/javascript" src="gallery.js"></script>
+</html>
