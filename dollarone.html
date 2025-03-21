@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDS</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <br>
+    <div id="navigation"></div>
+    <div id="flex">
+        <main>
+            <h1>$1 Unistroke Recognizer </h1>
+            <h2>
+                <a href="https://github.com/BasRuckebusch/Dollar1UnistrokeRecognizer" target="_blank">Source Code</a>
+            </h2>
+            <br>
+            <div id="description">
+              <div class="description-image">
+                <img src="assets/border.png" alt="Description Image">
+              </div>
+              <h1 class="highlight">General Information</h1>
+              <p>
+                <b>Project Duration:</b><br>
+                3 Days<br>
+                8 hours per day<br>
+                <b>Engine:</b> Unity<br>
+              </p>
+              <h1 class="highlight">What is it?</h1>
+              <p>This is a unistroke recogniser made in Unity based on <a href="https://faculty.washington.edu/wobbrock/pubs/uist-07.01.pdf">this paper</a>.</p>
+              <p>I used it during the creation of <a href="nds.html">NDS</a> as the basics of its main mechanic.</p>
+              <br>
+            </div>
+            <br>
+            <img src="assets/projects/D1.gif">
+            <p>
+                This is my one-dollar universal recognizer, developed in Unity for Hieda no Akyuu's Nocturnal Discordant
+                Symposium (NDS). While working on NDS, I came across a research paper that laid the groundwork for the main
+                mechanic we aimed to implement. This mechanic relied on users drawing patterns and recognizing them when they
+                stopped drawing. To promote fast arcade gameplay, all inputs are singular strokes, so the user could draw
+                multiple gestures in quick succession.
+              </p>
+              <p>
+                The recognizer class first normalizes the drawn pattern. This is achieved by resampling the list, ensuring
+                points are evenly spaced. For instance, if you ask for 128 points, it guarantees an equal distribution along
+                the drawn path.
+              </p>
+              <p>
+                Then, it normalizes rotation, allowing the recognizer to identify the pattern regardless of how or where it
+                was drawn. This is accomplished by calculating centroids and determining the angle between the centroid and
+                the initial point in the list.
+              </p>
+              <p>
+                The recognizer then scales the entire pattern, almost treating it like an image. It resizes it to a square,
+                maintaining a consistent size regardless of the original drawing's proportions. This square shape simplifies
+                recognition. <br>
+                Finally, it translates the square pattern back to the origin, ensuring all patterns share the same reference
+                point. This enhances recognition accuracy and consistency.
+              </p>
+              <br>
+              <p>
+                The recognition process involves comparing two sets of values: the input points (from the user's drawing) and
+                template points (representing known patterns). Both sets have been normalized. The system calculates the
+                distance between corresponding points in these arrays and assigns scores. The template with the highest score
+                is chosen, indicating the recognized pattern.
+              </p>
+              <p>
+                Once the template with the highest score is identified, its associated name can be used to trigger various
+                actions or behaviours in the program. For instance, if the system recognizes a circle, it can execute the
+                corresponding functionality specific to circles.
+              </p>
+              <p>
+                In addition to the recognition process, there's another intriguing aspect to how this system operates. It
+                employs a box collider to accurately track the mouse's position. This position data is then translated into a
+                hit point, which can be directly applied to the sprite itself. This unique approach involves manipulating
+                pixels and the image itself to visualize the recognized patterns. It's a weird and unconventional way of doing
+                it (as is the course for most things I wrote for this jam) but one I've grown to enjoy immensely.
+              </p>
+              <br>
+              <p>
+                I've gained a deeper understanding of sprites in Unity and how to manipulate them, and I've delved into the
+                realm of saving and loading data within Unity. Most of my games before this did not involve data storage; this
+                project introduced me to working with unity's resources folder and handling data interchangeably between JSON
+                data and in-game functionality, which I found immensely valuable.
+              </p>
+              <img src="assets/projects/Question.gif">
+        </main>
+    </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+<script type="text/javascript" src="gallery.js"></script>
+</html>
