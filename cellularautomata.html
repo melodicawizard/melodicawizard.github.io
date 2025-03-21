@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cellular Automata</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <br>
+    <div id="navigation"></div>
+    <div id="flex">
+        <main>
+            <h1>Formations</h1>
+            <h2>
+                <a href="https://github.com/BasRuckebusch/Formations" target="_blank">Source Code</a>
+            </h2>
+            <br>
+            <div id="gallery">
+                <div id="main-image-container">
+                  <img id="main-image" src="assets/projects/CellularAutomata.png" alt="Main Image">
+                </div>
+                <div id="thumbnail-container">
+                    <img class="thumbnail" src="assets/projects/CellularAutomata.png" alt="Thumbnail 1">
+                    <img class="thumbnail" src="assets/projects/CA.png" alt="Thumbnail 2">
+                    <img class="thumbnail" src="assets/projects/CaveGen.gif" alt="Thumbnail 3">
+                    <img class="thumbnail" src="assets/projects/results.gif" alt="Thumbnail 4">
+
+                </div>
+            </div>
+            <div id="description">
+              <div class="description-image">
+                <img src="assets/border.png" alt="Description Image">
+              </div>
+              <h1 class="highlight">What is it?</h1>
+              <p>A simple cave generation system that I made in Unity. </p>
+              <p>It uses cellular automata to generate cave-like structures, allowing for customization through rule adjustments.</p>
+              <br>
+            </div>
+            <br>
+        </main>
+    </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+<script type="text/javascript" src="gallery.js"></script>
+</html>
