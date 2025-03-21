@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header"></div>
+    <br>
+    <div id="navigation"></div>
+    <div id="flex">
+        <main>
+            <h1>Formations</h1>
+            <h2>
+                <a href="https://github.com/BasRuckebusch/Formations" target="_blank">Source Code</a>
+            </h2>
+            <br>
+            <div id="gallery">
+                <div id="main-image-container">
+                  <img id="main-image" src="assets/projects/formations.gif" alt="Main Image">
+                </div>
+                <div id="thumbnail-container">
+                    <img class="thumbnail" src="assets/projects/formations.gif" alt="Thumbnail 1">
+                    <div class="thumbnail video-thumbnail" data-video="https://user-images.githubusercontent.com/97399311/213542694-291beb36-23a6-4a0c-936d-8a081d564248.mp4">
+                        <video muted loop>
+                            <source src="https://user-images.githubusercontent.com/97399311/213542694-291beb36-23a6-4a0c-936d-8a081d564248.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="thumbnail video-thumbnail" data-video="https://user-images.githubusercontent.com/97399311/213543070-509ad77d-bce0-4641-8a86-f70598949f7d.mp4">
+                        <video muted loop>
+                            <source src="https://user-images.githubusercontent.com/97399311/213543070-509ad77d-bce0-4641-8a86-f70598949f7d.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div id="description">
+              <div class="description-image">
+                <img src="assets/border.png" alt="Description Image">
+              </div>
+              <h1 class="highlight">General Information</h1>
+              <p>
+                <b>Project Duration:</b><br>
+                1 Month<br>
+                4 hours per week<br>
+                <b>Engine:</b> Unity<br>
+              </p>
+              <h1 class="highlight">What is it?</h1>
+              <p>This is a project that aims to create unit formations for Real-Time Strategy games in unity. Made as part of the gameplay programming course at DAE.</p>
+              <p>In most RTS games, players can create formations for their units. This is done by selecting a group of units and then assigning a formation to them. These allow players to organize their forces and position them for maximum effectiveness on a virtual battlefield. </p>
+              <br>
+            </div>
+            <br>
+        </main>
+    </div>
+</body>
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
+<script type="text/javascript" src="gallery.js"></script>
+</html>
